@@ -14,6 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { API_BASE_URL } from "@/lib/api-config";
 
 export default function TrailerPage() {
   const [url, setUrl] = useState("");
@@ -26,7 +27,6 @@ export default function TrailerPage() {
     setIsAnalyzing(true);
     setError(null);
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
       const response = await fetch(`${API_BASE_URL}/analyze-trailer`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -53,7 +53,7 @@ export default function TrailerPage() {
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pulse/10 border border-pulse/20 text-[10px] font-black text-pulse uppercase tracking-[0.2em] font-mono">
             <Sparkles className="w-3 h-3" />
-            AI Vision Engaged
+            AI Analysis Active
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-white font-mono">
             TRAILER <span className="text-pulse">AUDIT</span>
@@ -105,9 +105,9 @@ export default function TrailerPage() {
           
           <div className="flex items-center gap-3 text-slate-600 font-mono text-[9px] font-black uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-slate-800" />
-            V1.47 ENGINE ACTIVE
+            Analysis Engine Active
             <span className="w-1.5 h-1.5 rounded-full bg-slate-800 ml-4" />
-            LATENCY: 12ms
+            Latency: 12ms
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function TrailerPage() {
         <div className="p-6 hud-card border-red-500/30 bg-red-500/5 text-red-400 font-mono text-xs flex items-center gap-4 animate-in fade-in zoom-in duration-300">
           <AlertTriangle className="w-5 h-5 flex-shrink-0" />
           <div className="space-y-1">
-            <p className="font-black uppercase tracking-widest">System Override Error</p>
+            <p className="font-black uppercase tracking-widest">Analysis Error</p>
             <p className="opacity-70">{error}</p>
           </div>
         </div>
@@ -147,14 +147,14 @@ export default function TrailerPage() {
                   <h3 className="font-mono font-black text-white uppercase tracking-wider text-sm flex items-center gap-2">
                     <BarChart3 className="w-4 h-4 text-plasma" /> Retention probability
                   </h3>
-                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">Vision-AI Intensity scan over 40s timeline</p>
+                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">AI Intensity scan over 40s timeline</p>
                 </div>
                 {!analysisResult.isFullAudit && (
                   <button 
                     onClick={() => handleAnalyze(true)}
-                    className="px-4 py-2 bg-pulse/10 border border-pulse/30 text-pulse text-[9px] font-black font-mono rounded-lg hover:bg-pulse hover:text-carbon transition-all uppercase tracking-widest cursor-pointer"
+                    className="px-4 py-2 bg-pulse/10 border border-pulse/20 text-pulse text-[9px] font-black font-mono rounded-lg hover:bg-pulse hover:text-carbon transition-all uppercase tracking-widest cursor-pointer"
                   >
-                    Unlock Full Audit
+                    Unlock Full Analysis
                   </button>
                 )}
               </div>
@@ -224,7 +224,7 @@ export default function TrailerPage() {
                           onClick={() => handleAnalyze(true)}
                           className="mt-3 text-[10px] font-black text-pulse hover:underline font-mono uppercase tracking-widest cursor-pointer"
                         >
-                          Unlock Protocol Delta
+                          Unlock Full Analysis
                         </button>
                       )}
                     </div>

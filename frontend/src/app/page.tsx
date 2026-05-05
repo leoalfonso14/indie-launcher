@@ -39,10 +39,10 @@ export default function Home() {
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-plasma/10 border border-plasma/20 text-[10px] font-black text-plasma uppercase tracking-[0.2em] font-mono">
             <ShieldCheck className="w-3 h-3" />
-            Operational Dashboard Active
+            Dashboard Overview
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-white font-mono uppercase">
-            Commander <span className="text-plasma">Leandro</span>
+            Welcome, <span className="text-plasma">Leandro</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-xl font-medium">
             System ready. Intelligence gathered across 1,204 creator leads.

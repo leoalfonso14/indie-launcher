@@ -16,6 +16,7 @@ import {
   Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { API_BASE_URL } from "@/lib/api-config";
 
 interface StreamerProfile {
   id: string;
@@ -39,7 +40,6 @@ export default function ProfilePage() {
   useEffect(() => {
     async function fetchProfile() {
       try {
-        const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
         const response = await fetch(`${API_BASE_URL}/streamer/${slug}`);
         if (!response.ok) throw new Error("Profile link expired or invalid.");
         const data = await response.json();
@@ -62,7 +62,7 @@ export default function ProfilePage() {
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6">
         <div className="w-16 h-16 border-4 border-plasma/20 border-t-plasma rounded-full animate-spin" />
         <p className="font-mono text-xs text-plasma uppercase tracking-[0.3em] animate-pulse">
-          Initializing Dossier...
+          Preparing Profile...
         </p>
       </div>
     );
@@ -76,7 +76,7 @@ export default function ProfilePage() {
         </div>
         <div className="space-y-2">
           <h2 className="text-xl font-black text-white font-mono uppercase tracking-tighter">
-            Access Denied
+            Profile Unavailable
           </h2>
           <p className="text-slate-400 text-sm font-medium">
             This profile link has expired or is unauthorized for this session.
@@ -173,7 +173,7 @@ export default function ProfilePage() {
 
           <div className="hud-card p-6 border-slate-800/50 space-y-4">
             <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-widest font-mono">
-              Dossier Accuracy
+              Match Score
             </h3>
             <div className="flex items-end justify-between">
               <span className="text-4xl font-black text-white font-mono">
@@ -229,8 +229,7 @@ export default function ProfilePage() {
             </div>
             <div className="relative z-10 space-y-6">
               <h3 className="font-mono font-black text-white uppercase tracking-widest text-sm flex items-center gap-2">
-                <Target className="w-5 h-5 text-plasma" /> Strategic Fit
-                Analysis
+                <Target className="w-5 h-5 text-plasma" /> Creator Analysis
               </h3>
               <p className="text-slate-400 text-lg leading-relaxed font-medium">
                 {streamer.reason}
@@ -239,7 +238,7 @@ export default function ProfilePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
                 <div className="space-y-4">
                   <h4 className="text-[10px] font-black text-plasma uppercase tracking-widest font-mono flex items-center gap-2">
-                    <CheckCircle className="w-3 h-3" /> Acquisition Triggers
+                    <CheckCircle className="w-3 h-3" /> Positive Signals
                   </h4>
                   <ul className="space-y-3">
                     {[
@@ -259,13 +258,13 @@ export default function ProfilePage() {
                 </div>
                 <div className="space-y-4">
                   <h4 className="text-[10px] font-black text-pulse uppercase tracking-widest font-mono flex items-center gap-2">
-                    <Zap className="w-3 h-3" /> Best Contact Channel
+                    <Zap className="w-3 h-3" /> Contact Details
                   </h4>
                   <div className="p-4 bg-carbon/50 rounded-xl border border-slate-800 font-mono text-[11px] text-slate-300">
                     {isSimulated ? (
                       <div className="space-y-1 animate-in fade-in zoom-in duration-300">
                         <p className="text-plasma">
-                          DIRECT_UP_LINK:{" "}
+                          Email:{" "}
                           {streamer.name.toLowerCase().replace(" ", ".")}
                           @creator-hub.com
                         </p>

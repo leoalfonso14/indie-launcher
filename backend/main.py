@@ -31,12 +31,10 @@ else:
 
 app = FastAPI(title="Indie Launcher API")
 
-# Enable CORS for the frontend
-allowed_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",")
-
+# Enable CORS for development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -133,9 +131,11 @@ async def analyze_trailer(request: AnalysisRequest):
 # Streamer Sniper Endpoint
 @app.post("/match-streamers")
 async def match_streamers(request: StreamerMatchRequest):
-    print(f"INFO: Matching streamers for genre: {request.genre}")
+    print(f"DEBUG: STREAMER_DB keys: {list(STREAMER_DB.keys())}")
     genre = request.genre if request.genre in STREAMER_DB else "Roguelike"
-    all_streamers = STREAMER_DB[genre]
+    print(f"DEBUG: Using genre: {genre}")
+    all_streamers = STREAMER_DB.get(genre, [])
+    print(f"DEBUG: Found {len(all_streamers)} streamers for {genre}")
     
     processed_streamers = []
     for index, streamer in enumerate(all_streamers):
