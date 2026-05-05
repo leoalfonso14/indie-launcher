@@ -31,10 +31,14 @@ else:
 
 app = FastAPI(title="Indie Launcher API")
 
-# Enable CORS for development
+# Security: Restrict API access to your Vercel URL
+# Locally, it defaults to allowing localhost:3000
+raw_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000")
+allowed_origins = [o.strip() for o in raw_origins.split(",")]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
