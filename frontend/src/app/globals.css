@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  /* Neon-Tactical Core Palette */
+  --color-carbon: #0B0E14;
+  --color-carbon-light: #161B22;
+  --color-slate-850: #1E293B;
+  --color-plasma: #2DD4BF;
+  --color-pulse: #F472B6;
+  --color-ghost: #F1F5F9;
+
+  /* HUD Functional Colors */
+  --color-primary: var(--color-plasma);
+  --color-secondary: var(--color-pulse);
+  --color-background: var(--color-carbon);
+  --color-foreground: var(--color-ghost);
+  --color-border: #1E293B;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+
+  /* Animation Overrides */
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Global Reset & Base HUD Style */
+@layer base {
+  *, ::after, ::before {
+    border-color: var(--color-border);
+  }
+  
+  body {
+    background-color: var(--color-carbon);
+    color: var(--color-ghost);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    
+    /* Subtle background glow for that high-end HUD feel */
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(244, 114, 182, 0.05) 0px, transparent 50%);
+  }
+
+  h1, h2, h3, h4, .font-hud {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom HUD Utilities */
+@layer components {
+  .hud-card {
+    background-color: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 41, 59, 1);
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .hud-border-plasma {
+    border-color: rgba(45, 212, 191, 0.3);
+  }
+  .hud-border-plasma:hover {
+    border-color: rgba(45, 212, 191, 0.6);
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.15);
+  }
+
+  .hud-border-pulse {
+    border-color: rgba(244, 114, 182, 0.3);
+  }
+  .hud-border-pulse:hover {
+    border-color: rgba(244, 114, 182, 0.6);
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.15);
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #2DD4BF, #F472B6);
+  }
+
+  /* Scanline Overlay (Low impact, high aesthetic) */
+  .scanline-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.15;
+  }
+
+  /* Grain Overlay (Tactical hardware feel) */
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    filter: contrast(150%) brightness(100%);
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.03;
+  }
+
+  /* Thin, Tactical Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(45, 212, 191, 0.3);
+  }
+}

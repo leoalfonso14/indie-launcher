@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+google-genai
+python-dotenv
+pydantic
+requests
+yt-dlp
+google-api-python-client
