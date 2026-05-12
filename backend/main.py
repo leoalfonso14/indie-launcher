@@ -1,4 +1,4 @@
-import os
+import os 
 import time
 import json
 import re
@@ -12,7 +12,7 @@ from google import genai
 from dotenv import load_dotenv
 
 # Import our new database
-from streamer_db import STREAMER_DB, get_available_genres
+from streamer_db import STREAMER_DB, get_available_genres, get_total_streamer_count
 
 # Load environment variables
 load_dotenv()
@@ -136,9 +136,22 @@ async def analyze_trailer(request: AnalysisRequest):
 @app.post("/match-streamers")
 async def match_streamers(request: StreamerMatchRequest):
     print(f"DEBUG: STREAMER_DB keys: {list(STREAMER_DB.keys())}")
-    genre = request.genre if request.genre in STREAMER_DB else "Roguelike"
-    print(f"DEBUG: Using genre: {genre}")
-    all_streamers = STREAMER_DB.get(genre, [])
+    genre = request.genre
+    if genre == "All":
+        all_streamers_raw = []
+        seen_keys = set()
+        for g_list in STREAMER_DB.values():
+            for s in g_list:
+                key = (s["name"].strip().lower(), s["platform"])
+                if key not in seen_keys:
+                    all_streamers_raw.append(s)
+                    seen_keys.add(key)
+        all_streamers = all_streamers_raw
+    else:
+        if genre not in STREAMER_DB:
+            genre = "Roguelike"
+        all_streamers = STREAMER_DB.get(genre, [])
+    
     print(f"DEBUG: Found {len(all_streamers)} streamers for {genre}")
     
     processed_streamers = []
@@ -158,12 +171,21 @@ async def match_streamers(request: StreamerMatchRequest):
         if is_locked:
             processed_streamer["name"] = "Premium Creator"
             processed_streamer["reason"] = "Upgrade to Launch Kit to unlock this lead and contact info."
+            processed_streamer["email"] = "Unlock with Launch Kit"
+            processed_streamer["discord"] = "Unlock with Launch Kit"
+        else:
+            # Professional markers for Elite vs Scraped leads
+            if "email" not in processed_streamer or processed_streamer["email"] == "Unknown":
+                processed_streamer["email"] = "Verified in Launch Kit" if streamer["id"].startswith(("rl-", "mv-", "cz-", "st-", "db-", "sl-", "hr-", "pz-")) else "Discovery Pending"
+            if "discord" not in processed_streamer or processed_streamer["discord"] == "Unknown":
+                processed_streamer["discord"] = "Verified in Launch Kit" if streamer["id"].startswith(("rl-", "mv-", "cz-", "st-", "db-", "sl-", "hr-", "pz-")) else "Discovery Pending"
             
         processed_streamers.append(processed_streamer)
         
     return {
         "genre": genre,
         "count": len(processed_streamers),
+        "totalVetted": get_total_streamer_count(),
         "streamers": processed_streamers,
         "availableGenres": get_available_genres()
     }
@@ -174,12 +196,24 @@ async def get_streamer_profile(slug: str):
         raise HTTPException(status_code=404, detail="Profile link expired or invalid.")
     
     mapping = SLUG_MAP[slug]
-    genre_data = STREAMER_DB.get(mapping["genre"], [])
+    streamer = None
     
-    # Find the streamer by real ID
-    streamer = next((s for s in genre_data if s["id"] == mapping["id"]), None)
+    # Search for the streamer in all genres
+    for g_name, streamers in STREAMER_DB.items():
+        streamer = next((s for s in streamers if s["id"] == mapping["id"]), None)
+        if streamer:
+            processed_streamer = streamer.copy()
+            processed_streamer["genre"] = g_name
+            break
     
     if not streamer:
         raise HTTPException(status_code=404, detail="Streamer not found.")
+    # Apply professional markers for consistency
+    if "email" not in processed_streamer or processed_streamer["email"] in ["Unknown", "Discovery Pending"]:
+        processed_streamer["email"] = "Verified in Launch Kit" if streamer["id"].startswith(("rl-", "mv-", "cz-", "st-", "db-", "sl-", "hr-", "pz-")) else "Discovery Pending"
+    if "discord" not in processed_streamer or processed_streamer["discord"] in ["Unknown", "Discovery Pending"]:
+        processed_streamer["discord"] = "Verified in Launch Kit" if streamer["id"].startswith(("rl-", "mv-", "cz-", "st-", "db-", "sl-", "hr-", "pz-")) else "Discovery Pending"
+    if "twitter" not in processed_streamer or processed_streamer["twitter"] in ["Unknown", "Discovery Pending"]:
+        processed_streamer["twitter"] = "Verified in Launch Kit" if streamer["id"].startswith(("rl-", "mv-", "cz-", "st-", "db-", "sl-", "hr-", "pz-")) else "Discovery Pending"
         
-    return streamer
+    return processed_streamer

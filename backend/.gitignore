@@ -22,7 +22,6 @@ coverage.xml
 .hypothesis/
 
 # Data
-streamer_data.json
 
 # IDE / OS
 .DS_Store

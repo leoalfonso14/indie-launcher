@@ -2,24 +2,31 @@
 
 import React, { useState } from "react";
 import {
-  Play,
-  Upload,
   AlertTriangle,
   CheckCircle,
   Zap,
-  TrendingUp,
   BarChart3,
-  Video,
-  Target,
   Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { API_BASE_URL } from "@/lib/api-config";
 
+interface AnalysisResult {
+  hookScore: number;
+  pacing: string;
+  retentionDrops: number[];
+  heatmapData: number[];
+  highlights: string[];
+  improvements: string[];
+  isFullAudit: boolean;
+}
+
 export default function TrailerPage() {
   const [url, setUrl] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState<any>(null);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(
+    null,
+  );
   const [error, setError] = useState<string | null>(null);
 
   const handleAnalyze = async (isFull: boolean = false) => {
@@ -34,13 +41,17 @@ export default function TrailerPage() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to analyze trailer. Check if backend is running.");
+        throw new Error(
+          "Failed to analyze trailer. Check if backend is running.",
+        );
       }
 
       const data = await response.json();
       setAnalysisResult(data);
-    } catch (err: any) {
-      setError(err.message || "An error occurred");
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "An error occurred";
+      setError(errorMessage);
     } finally {
       setIsAnalyzing(false);
     }
@@ -59,18 +70,9 @@ export default function TrailerPage() {
             TRAILER <span className="text-pulse">AUDIT</span>
           </h1>
           <p className="text-slate-400 text-lg max-w-xl font-medium">
-            Deploy Vision-AI to scan your hook strength and retention probability.
+            Deploy Vision-AI to scan the hook strength and retention probability
+            of your trailer.
           </p>
-        </div>
-
-        <div className="flex items-center gap-4 hud-card hud-border-pulse px-6 py-3 rounded-2xl">
-          <div className="text-right">
-            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest font-mono">Avg Score</p>
-            <p className="text-2xl font-black text-white font-mono">84.2<span className="text-pulse text-xs">%</span></p>
-          </div>
-          <div className="w-10 h-10 rounded-full border-2 border-pulse/30 flex items-center justify-center">
-            <TrendingUp className="w-5 h-5 text-pulse" />
-          </div>
         </div>
       </div>
 
@@ -95,14 +97,18 @@ export default function TrailerPage() {
                 className="px-8 py-4 bg-plasma text-carbon font-black font-mono rounded-2xl shadow-[0_0_20px_rgba(45,212,191,0.2)] hover:scale-105 transition-all disabled:opacity-50 disabled:scale-100 flex items-center justify-center gap-3 uppercase tracking-widest text-xs cursor-pointer"
               >
                 {isAnalyzing ? (
-                  <><Zap className="w-4 h-4 animate-pulse" /> Scanning...</>
+                  <>
+                    <Zap className="w-4 h-4 animate-pulse" /> Scanning...
+                  </>
                 ) : (
-                  <><Zap className="w-4 h-4" /> Start Audit</>
+                  <>
+                    <Zap className="w-4 h-4" /> Start Audit
+                  </>
                 )}
               </button>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3 text-slate-600 font-mono text-[9px] font-black uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-slate-800" />
             Analysis Engine Active
@@ -114,9 +120,11 @@ export default function TrailerPage() {
 
       {error && (
         <div className="p-6 hud-card border-red-500/30 bg-red-500/5 text-red-400 font-mono text-xs flex items-center gap-4 animate-in fade-in zoom-in duration-300">
-          <AlertTriangle className="w-5 h-5 flex-shrink-0" />
+          <AlertTriangle className="w-5 h-5 shrink-0" />
           <div className="space-y-1">
-            <p className="font-black uppercase tracking-widest">Analysis Error</p>
+            <p className="font-black uppercase tracking-widest">
+              Analysis Error
+            </p>
             <p className="opacity-70">{error}</p>
           </div>
         </div>
@@ -130,7 +138,9 @@ export default function TrailerPage() {
             <div className="hud-card p-10 hud-border-pulse flex flex-col items-center justify-center text-center space-y-6 relative overflow-hidden">
               <div className="absolute inset-0 bg-pulse/5 animate-pulse" />
               <div className="relative z-10 space-y-2">
-                <p className="text-[10px] font-black text-pulse uppercase tracking-[0.4em] font-mono">Hook Score</p>
+                <p className="text-[10px] font-black text-pulse uppercase tracking-[0.4em] font-mono">
+                  Hook Score
+                </p>
                 <div className="text-8xl font-black text-white font-mono tracking-tighter">
                   {analysisResult.hookScore}
                 </div>
@@ -145,12 +155,15 @@ export default function TrailerPage() {
               <div className="flex justify-between items-center">
                 <div className="space-y-1">
                   <h3 className="font-mono font-black text-white uppercase tracking-wider text-sm flex items-center gap-2">
-                    <BarChart3 className="w-4 h-4 text-plasma" /> Retention probability
+                    <BarChart3 className="w-4 h-4 text-plasma" /> Retention
+                    probability
                   </h3>
-                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">AI Intensity scan over 40s timeline</p>
+                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">
+                    AI Intensity scan over 40s timeline
+                  </p>
                 </div>
                 {!analysisResult.isFullAudit && (
-                  <button 
+                  <button
                     onClick={() => handleAnalyze(true)}
                     className="px-4 py-2 bg-pulse/10 border border-pulse/20 text-pulse text-[9px] font-black font-mono rounded-lg hover:bg-pulse hover:text-carbon transition-all uppercase tracking-widest cursor-pointer"
                   >
@@ -158,14 +171,18 @@ export default function TrailerPage() {
                   </button>
                 )}
               </div>
-              
+
               <div className="h-48 flex items-end gap-1 group/heatmap">
                 {analysisResult.heatmapData.map((val: number, i: number) => (
                   <div
                     key={i}
                     className={cn(
                       "flex-1 rounded-t-sm transition-all duration-500 relative group",
-                      val > 0 ? (val > 70 ? "bg-plasma shadow-[0_0_10px_rgba(45,212,191,0.4)]" : "bg-plasma/40") : "bg-slate-900"
+                      val > 0
+                        ? val > 70
+                          ? "bg-plasma shadow-[0_0_10px_rgba(45,212,191,0.4)]"
+                          : "bg-plasma/40"
+                        : "bg-slate-900",
                     )}
                     style={{ height: `${Math.max(val, 5)}%` }}
                   >
@@ -192,10 +209,12 @@ export default function TrailerPage() {
               <ul className="space-y-6">
                 {analysisResult.highlights.map((h: string, i: number) => (
                   <li key={i} className="flex gap-4 group">
-                    <div className="w-6 h-6 rounded-lg bg-plasma/10 border border-plasma/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-6 h-6 rounded-lg bg-plasma/10 border border-plasma/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <CheckCircle className="w-3 h-3 text-plasma" />
                     </div>
-                    <p className="text-sm text-slate-300 font-medium leading-relaxed">{h}</p>
+                    <p className="text-sm text-slate-300 font-medium leading-relaxed">
+                      {h}
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -209,18 +228,22 @@ export default function TrailerPage() {
               <ul className="space-y-6">
                 {analysisResult.improvements.map((imp: string, i: number) => (
                   <li key={i} className="flex gap-4 group">
-                    <div className="w-6 h-6 rounded-lg bg-pulse/10 border border-pulse/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-6 h-6 rounded-lg bg-pulse/10 border border-pulse/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <AlertTriangle className="w-3 h-3 text-pulse" />
                     </div>
                     <div>
-                      <p className={cn(
-                        "text-sm font-medium leading-relaxed",
-                        imp.includes("Upgrade") ? "text-slate-500 italic" : "text-slate-300"
-                      )}>
+                      <p
+                        className={cn(
+                          "text-sm font-medium leading-relaxed",
+                          imp.includes("Upgrade")
+                            ? "text-slate-500 italic"
+                            : "text-slate-300",
+                        )}
+                      >
                         {imp}
                       </p>
                       {imp.includes("Upgrade") && (
-                        <button 
+                        <button
                           onClick={() => handleAnalyze(true)}
                           className="mt-3 text-[10px] font-black text-pulse hover:underline font-mono uppercase tracking-widest cursor-pointer"
                         >

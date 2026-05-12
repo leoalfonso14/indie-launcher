@@ -27,6 +27,10 @@ interface StreamerProfile {
   tags: string[];
   avgViewers: string;
   reason: string;
+  email?: string;
+  discord?: string;
+  genre?: string;
+  twitter?: string;
 }
 
 export default function ProfilePage() {
@@ -35,7 +39,7 @@ export default function ProfilePage() {
   const [streamer, setStreamer] = useState<StreamerProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isSimulated, setIsSimulated] = useState(false);
+  const [isSimulated, setIsSimulated] = useState(true);
 
   useEffect(() => {
     async function fetchProfile() {
@@ -165,7 +169,16 @@ export default function ProfilePage() {
                   </span>
                 ))}
               </div>
-              <button className="w-full py-4 bg-plasma text-carbon font-black font-mono rounded-2xl shadow-[0_0_20px_rgba(45,212,191,0.2)] hover:scale-105 transition-all cursor-pointer flex items-center justify-center gap-3 uppercase tracking-widest text-xs">
+              <button
+                onClick={() => {
+                  const url =
+                    streamer.platform === "twitch"
+                      ? `https://twitch.tv/${streamer.name.replace(/\s+/g, "")}`
+                      : `https://www.youtube.com/results?search_query=${encodeURIComponent(streamer.name)}`;
+                  window.open(url, "_blank");
+                }}
+                className="w-full py-4 bg-plasma text-carbon font-black font-mono rounded-2xl shadow-[0_0_20px_rgba(45,212,191,0.2)] hover:scale-105 transition-all cursor-pointer flex items-center justify-center gap-3 uppercase tracking-widest text-xs"
+              >
                 Visit Channel <ExternalLink className="w-4 h-4" />
               </button>
             </div>
@@ -264,12 +277,13 @@ export default function ProfilePage() {
                     {isSimulated ? (
                       <div className="space-y-1 animate-in fade-in zoom-in duration-300">
                         <p className="text-plasma">
-                          Email:{" "}
-                          {streamer.name.toLowerCase().replace(" ", ".")}
-                          @creator-hub.com
+                          Email: {streamer.email || "Discovery Pending"}
                         </p>
                         <p className="opacity-70 text-[9px]">
-                          Discord ID: {streamer.name.replace(" ", "")}#0001
+                          Discord ID: {streamer.discord || "Discovery Pending"}
+                        </p>
+                        <p className="opacity-70 text-[9px]">
+                          Twitter: {streamer.twitter || "Discovery Pending"}
                         </p>
                       </div>
                     ) : (

@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import React, { useState, useEffect, useCallback, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
   Search,
@@ -19,6 +19,7 @@ import {
   Sparkles,
   X,
   RotateCcw,
+  Users,
 } from "lucide-react";
 
 import { API_BASE_URL } from "@/lib/api-config";
@@ -34,15 +35,36 @@ interface Streamer {
   isLocked: boolean;
   reason: string;
   slug: string;
+  email?: string;
+  discord?: string;
+  twitter?: string;
 }
 
 type PlatformType = "all" | "twitch" | "youtube";
+type SortOption =
+  | "score-desc"
+  | "score-asc"
+  | "reach-desc"
+  | "reach-asc"
+  | "name-asc";
 
-export default function StreamerSniperPage() {
+function StreamerSniperContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialGenre = searchParams.get("genre") || "All";
+  const initialSearch = searchParams.get("search") || "";
+  const initialPlatform =
+    (searchParams.get("platform") as PlatformType) || "all";
+  const initialMinScore = parseInt(searchParams.get("minScore") || "0");
+  const initialContact = searchParams.get("contact") === "true";
+  const initialMinReach = parseInt(searchParams.get("minReach") || "0");
+  const initialSort = (searchParams.get("sort") as SortOption) || "score-desc";
+
   const [streamers, setStreamers] = useState<Streamer[]>([]);
-  const [genre, setGenre] = useState("Roguelike");
+  const [genre, setGenre] = useState(initialGenre);
+  const [totalVetted, setTotalVetted] = useState(0);
   const [availableGenres, setAvailableGenres] = useState<string[]>([
+    "All",
     "Roguelike",
     "Metroidvania",
     "Cozy / Farm Sim",
@@ -53,14 +75,58 @@ export default function StreamerSniperPage() {
     "Puzzle / Brain",
   ]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isSimulated, setIsSimulated] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
+  const [isSimulated, setIsSimulated] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
 
   // Filter States (Premium only)
   const [showFilters, setShowFilters] = useState(false);
-  const [platformFilter, setPlatformFilter] = useState<PlatformType>("all");
-  const [minScore, setMinScore] = useState(0);
+  const [platformFilter, setPlatformFilter] =
+    useState<PlatformType>(initialPlatform);
+  const [minScore, setMinScore] = useState(initialMinScore);
+  const [hasContactFilter, setHasContactFilter] = useState(initialContact);
+  const [minReach, setMinReach] = useState(initialMinReach);
+  const [sortBy, setSortBy] = useState<SortOption>(initialSort);
+
+  // Sync state to URL
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (genre !== "All") params.set("genre", genre);
+    if (searchQuery) params.set("search", searchQuery);
+    if (platformFilter !== "all") params.set("platform", platformFilter);
+    if (minScore > 0) params.set("minScore", minScore.toString());
+    if (hasContactFilter) params.set("contact", "true");
+    if (minReach > 0) params.set("minReach", minReach.toString());
+    if (sortBy !== "score-desc") params.set("sort", sortBy);
+
+    const queryString = params.toString();
+    const url = `/streamer${queryString ? `?${queryString}` : ""}`;
+    router.replace(url, { scroll: false });
+  }, [
+    genre,
+    searchQuery,
+    platformFilter,
+    minScore,
+    hasContactFilter,
+    minReach,
+    sortBy,
+    router,
+  ]);
+
+  const parseReach = (val: string) => {
+    if (!val) return 0;
+    const clean = val
+      .toLowerCase()
+      .replace(/,/g, "")
+      .replace(/\+/g, "")
+      .replace("avg", "")
+      .trim();
+    if (clean.includes("k subs")) return parseFloat(clean) * 1000;
+    if (clean.includes("m subs")) return parseFloat(clean) * 1000000;
+    if (clean.includes("k")) return parseFloat(clean) * 1000;
+    if (clean.includes("m")) return parseFloat(clean) * 1000000;
+    return parseInt(clean) || 0;
+  };
 
   const fetchStreamers = useCallback(
     async (selectedGenre: string) => {
@@ -78,6 +144,7 @@ export default function StreamerSniperPage() {
         // Safety check: ensure we have data before setting state
         if (data && data.streamers) {
           setStreamers(data.streamers);
+          if (data.totalVetted) setTotalVetted(data.totalVetted);
           if (data.availableGenres) setAvailableGenres(data.availableGenres);
         } else {
           console.warn("Backend returned empty or malformed data:", data);
@@ -116,6 +183,8 @@ export default function StreamerSniperPage() {
   const clearAllFilters = () => {
     setPlatformFilter("all");
     setMinScore(0);
+    setHasContactFilter(false);
+    setMinReach(0);
     setSearchQuery("");
   };
 
@@ -128,15 +197,50 @@ export default function StreamerSniperPage() {
     }
   };
 
-  const filteredStreamers = streamers.filter((s) => {
-    const matchesSearch =
-      s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      s.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesPlatform =
-      platformFilter === "all" || s.platform === platformFilter;
-    const matchesScore = s.matchScore >= minScore;
-    return matchesSearch && matchesPlatform && matchesScore;
-  });
+  const filteredStreamers = streamers
+    .filter((s) => {
+      const matchesSearch =
+        s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        s.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesPlatform =
+        platformFilter === "all" || s.platform === platformFilter;
+      const matchesScore = s.matchScore >= minScore;
+      const isReal = (val?: string) =>
+        val &&
+        val !== "Discovery Pending" &&
+        val !== "Verified in Launch Kit" &&
+        val !== "Unknown";
+
+      const matchesContact =
+        !hasContactFilter ||
+        isReal(s.email) ||
+        isReal(s.discord) ||
+        isReal(s.twitter);
+      const matchesReach = parseReach(s.avgViewers) >= minReach;
+      return (
+        matchesSearch &&
+        matchesPlatform &&
+        matchesScore &&
+        matchesContact &&
+        matchesReach
+      );
+    })
+    .sort((a, b) => {
+      switch (sortBy) {
+        case "score-desc":
+          return b.matchScore - a.matchScore;
+        case "score-asc":
+          return a.matchScore - b.matchScore;
+        case "reach-desc":
+          return parseReach(b.avgViewers) - parseReach(a.avgViewers);
+        case "reach-asc":
+          return parseReach(a.avgViewers) - parseReach(b.avgViewers);
+        case "name-asc":
+          return a.name.localeCompare(b.name);
+        default:
+          return 0;
+      }
+    });
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 pb-20">
@@ -180,7 +284,10 @@ export default function StreamerSniperPage() {
           <div className="flex items-center gap-3 hud-card hud-border-plasma px-4 py-2 rounded-2xl">
             <TrendingUp className="w-4 h-4 text-plasma" />
             <span className="text-xs font-bold text-ghost uppercase tracking-wider font-mono">
-              <span className="text-plasma">72+</span> vetted leads
+              <span className="text-plasma">
+                {totalVetted > 0 ? totalVetted : "..."}
+              </span>{" "}
+              vetted leads
             </span>
           </div>
         </div>
@@ -226,6 +333,21 @@ export default function StreamerSniperPage() {
             )}
           </div>
           <div className="flex gap-2 w-full md:w-auto">
+            <div className="relative group flex-1 md:flex-none">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as SortOption)}
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-[10px] font-black font-mono bg-carbon-light hover:bg-slate-800 text-white border border-slate-700 cursor-pointer appearance-none outline-none focus:ring-1 focus:ring-plasma/50 tracking-wider"
+              >
+                <option value="score-desc">Score ↓</option>
+                <option value="score-asc">Score ↑</option>
+                <option value="reach-desc">Reach ↓</option>
+                <option value="reach-asc">Reach ↑</option>
+                <option value="name-asc">Name A-Z</option>
+              </select>
+              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-3 h-3 text-slate-500 pointer-events-none" />
+            </div>
+
             <div className="relative group flex-1 md:flex-none">
               <button
                 onClick={() => isSimulated && setShowFilters(!showFilters)}
@@ -328,6 +450,64 @@ export default function StreamerSniperPage() {
                   <span>Elite only</span>
                 </div>
               </div>
+
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <label className="text-[10px] font-bold text-plasma uppercase tracking-widest flex items-center gap-2 font-mono">
+                    <Users className="w-3 h-3" /> Min. Reach
+                  </label>
+                  <span className="text-xs font-black text-plasma font-mono">
+                    {minReach >= 1000
+                      ? `${(minReach / 1000).toFixed(0)}k+`
+                      : minReach}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100000"
+                  step="1000"
+                  value={minReach}
+                  onChange={(e) => setMinReach(parseInt(e.target.value))}
+                  className="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-plasma"
+                />
+                <div className="flex justify-between text-[8px] text-slate-600 font-mono">
+                  <span>0</span>
+                  <span>100k+</span>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <label className="text-[10px] font-bold text-plasma uppercase tracking-widest flex items-center gap-2 font-mono">
+                  <Zap className="w-3 h-3" /> Contact Availability
+                </label>
+                <button
+                  onClick={() => setHasContactFilter(!hasContactFilter)}
+                  className={cn(
+                    "w-full flex items-center justify-between p-4 rounded-xl border transition-all font-mono text-[10px] uppercase tracking-widest cursor-pointer",
+                    hasContactFilter
+                      ? "bg-plasma/10 border-plasma text-plasma shadow-[0_0_10px_rgba(45,212,191,0.1)]"
+                      : "bg-carbon/50 border-slate-800 text-slate-500 hover:border-slate-700",
+                  )}
+                >
+                  Has Contact Info Only
+                  <div
+                    className={cn(
+                      "w-8 h-4 rounded-full relative transition-colors border",
+                      hasContactFilter
+                        ? "bg-plasma border-plasma"
+                        : "bg-slate-900 border-slate-700",
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        "absolute top-0.5 w-2.5 h-2.5 rounded-full bg-white transition-all",
+                        hasContactFilter ? "left-4.5" : "left-0.5",
+                      )}
+                    />
+                  </div>
+                </button>
+              </div>
             </div>
 
             <div className="flex justify-end pt-6 border-t border-slate-800/50">
@@ -411,7 +591,9 @@ export default function StreamerSniperPage() {
                         <div className="flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-slate-600" />
                           <p className="text-[9px] text-slate-500 font-mono tracking-tighter">
-                            {streamer.avgViewers} avg. viewers
+                            {streamer.avgViewers.includes("subs")
+                              ? streamer.avgViewers
+                              : `${streamer.avgViewers}`}
                           </p>
                         </div>
                       </div>
@@ -567,5 +749,21 @@ export default function StreamerSniperPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function StreamerSniperPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex flex-col items-center justify-center py-32 space-y-6">
+          <div className="relative">
+            <Loader2 className="w-16 h-16 text-plasma animate-spin" />
+          </div>
+        </div>
+      }
+    >
+      <StreamerSniperContent />
+    </Suspense>
   );
 }

@@ -1,0 +1,1457 @@
+{
+    "Roguelike": [
+        {
+            "id": "yt-h-0c7a09",
+            "name": "Aliensrock",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Roguelike Specialist",
+                "Strategy Expert",
+                "High-Engagement"
+            ],
+            "avgViewers": "761k subs",
+            "reason": "Aliensrock holds a significant position as a major industry authority for Roguelike strategy, providing massive reach to a dedicated fanbase. Partnering with him ensures high-visibility gameplay showcases that directly influence purchasing decisions within the enthusiast community.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-dfad6b",
+            "name": "Indie Game Clinic",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Enthusiast",
+                "Game Design Analyst",
+                "Community-Focused"
+            ],
+            "avgViewers": "42k subs",
+            "reason": "Indie Game Clinic offers valuable mid-tier reach combined with high-quality analytical feedback that can help refine your game's market positioning. Their audience is composed of developers and dedicated indie fans who appreciate deep dives into game design mechanics.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-c068a6",
+            "name": "Dorian The Explorian",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Discoverer",
+                "Variety Gamer",
+                "Up-and-Coming"
+            ],
+            "avgViewers": "2k subs",
+            "reason": "Dorian The Explorian serves as an excellent grassroots partner for early-stage discovery and rapid audience testing in the indie Roguelike space. His content style is ideal for generating quick social proof and interest from players who actively hunt for fresh, unreleased titles.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-cd95f0",
+            "name": "Coach Plague",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Hardcore",
+                "Challenge Runner",
+                "Souls-like"
+            ],
+            "avgViewers": "1k subs",
+            "reason": "Coach Plague provides a hyper-niche connection to the hardcore community, making them an ideal candidate for testing the mechanical difficulty and 'masocore' elements of your game. Targeting this creator allows you to tap into a highly loyal fanbase that values technical skill and challenge-based content.",
+            "email": "coachplagueyt@gmail.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-f69ffa",
+            "name": "Juniper Dev",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Indie Developer",
+                "High-Reach",
+                "Variety Gamer"
+            ],
+            "avgViewers": "389k subs",
+            "reason": "Juniper Dev occupies a powerful position as a large-scale creator whose audience bridges the gap between avid players and game developers. Leveraging their massive reach is essential for broad-market exposure and establishing your game as a notable project within the indie dev ecosystem.",
+            "email": "juniperdev@rightclick.gg",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-eb11df",
+            "name": "Icoso",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Dev",
+                "Educational",
+                "Growth-Oriented"
+            ],
+            "avgViewers": "93k subs",
+            "reason": "Icoso offers a unique 'dev-to-player' perspective that fosters high trust and community engagement within the indie ecosystem. Their audience is primed for developer-led narratives, making them an ideal partner for organic, long-form launcher integration.",
+            "email": "icoso@intheblackmedia.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-6bfa44",
+            "name": "DaydreamerDan",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "High Energy",
+                "Live-Focused",
+                "Community-Driven"
+            ],
+            "avgViewers": "8k subs",
+            "reason": "DaydreamerDan\u2019s high-energy personality and consistent Twitch integration provide a dynamic environment for showcasing fast-paced, high-stakes roguelike gameplay. Their dedicated community is well-suited for live, interactive promotional events.",
+            "email": "DaydreamerDan@PaidiaGaming.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-23d65c",
+            "name": "Trash Taste Shorts",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Massive Reach",
+                "Pop-Culture",
+                "Entertainment"
+            ],
+            "avgViewers": "281k subs",
+            "reason": "As a major hub in the anime and gaming culture space, Trash Taste Shorts provides unparalleled reach to a massive, crossover audience. Leveraging this reach is essential for broad-scale awareness and mainstreaming the launcher's presence.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-b50463",
+            "name": "rndThursday",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Roguelike Specialist",
+                "Deep-Dive",
+                "Niche-Authority"
+            ],
+            "avgViewers": "152k subs",
+            "reason": "With a established presence in the Risk of Rain 2 community, rndThursday provides highly targeted exposure to an audience already deeply invested in the roguelike genre. Their technical content focus ensures that viewers are primed for the utility features of an indie game launcher.",
+            "email": "Rnd@expansion.gg",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-0800fe",
+            "name": "Exvarghra GameLog",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Curator",
+                "Discovery-Focused",
+                "Game Lists"
+            ],
+            "avgViewers": "8k subs",
+            "reason": "Exvarghra GameLog is a specialized curator of indie titles, offering a high conversion rate for users specifically searching for new roguelike and metroidvania content. Their audience is actively seeking discovery tools, aligning perfectly with a game launcher's value proposition.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-ac6eff",
+            "name": "Roguelike",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Tactical Gamer",
+                "Strategy Enthusiast",
+                "Hardcore"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "As an active streamer focused on tactical gameplay like Fire Emblem, this creator possesses an audience highly receptive to the strategic depth inherent in the Roguelike genre. Partnering with them allows for direct exposure to a community that values complex mechanics and long-form decision making.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-f5ab56",
+            "name": "RogueLikeDuck",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Deckbuilder Expert",
+                "Strategist",
+                "Community-Focused"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "This creator focuses on card-based strategy, making them an ideal candidate for promoting indie Roguelikes that feature deck-building or meta-progression elements. Their platform is perfect for showcasing games that prioritize quick, iterative decision-making cycles.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-4091d3",
+            "name": "roguelikedes",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Advocate",
+                "Niche Community",
+                "Rising Star"
+            ],
+            "avgViewers": "~21 avg views",
+            "reason": "Targeting this rising creator provides an opportunity for high-engagement, grassroots marketing within the niche Roguelike community. Their focused viewership allows for deeper interaction with potential early adopters who value authentic gameplay discovery.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-696713",
+            "name": "roguelikeshik",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Variety Streamer",
+                "Community Builder",
+                "Engagement Focused"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "The 'Just Chatting' format allows for a more personal endorsement style, which is highly effective for building trust with viewers around new software or launcher tools. This creator acts as a versatile conduit to reach a broader, more general audience interested in gaming culture.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-226857",
+            "name": "roguelike_con",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Industry Commentator",
+                "Thought Leader",
+                "Podcast"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "Leveraging this creator allows for deep-dive discussions on industry trends, providing a platform to talk directly to an audience interested in the evolution of indie gaming. Their talk-show format is ideal for providing long-form context and value propositions to a dedicated listener base.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-235ea3",
+            "name": "Roguelike Bang",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Roguelike Enthusiast",
+                "Game Discovery",
+                "Niche Gaming"
+            ],
+            "avgViewers": "629",
+            "reason": "As an emerging content creator focused exclusively on the roguelike genre, this channel offers highly targeted access to a core audience interested in game discovery. Partnering here provides a low-cost, high-intent opportunity to drive early adoption within a niche community.",
+            "email": "yuzurach6@gmail.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-f43cf0",
+            "name": "GingerNingerish",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Advocate",
+                "Community Builder",
+                "Mid-tier Influencer"
+            ],
+            "avgViewers": "7k subs",
+            "reason": "With a dedicated subscriber base of 7k, this creator provides a valuable community-focused platform for testing and gathering feedback on the launcher's features. Engaging with this mid-sized creator allows for authentic community building and direct interaction with passionate indie gamers.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        }
+    ],
+    "Metroidvania": [
+        {
+            "id": "yt-h-194709",
+            "name": "Renkai Games",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Lore Expert",
+                "Retro Enthusiast",
+                "Deep Dive"
+            ],
+            "avgViewers": "22k subs",
+            "reason": "Renkai Games offers a dedicated and highly engaged audience interested in deep dives and historical analysis, making them ideal for building lore-heavy brand awareness. Their focus on the evolution of gaming aligns perfectly with the depth required to showcase complex Metroidvania mechanics.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-9dd211",
+            "name": "Best Indie Games",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Indie Discovery",
+                "Curator",
+                "Trendsetter"
+            ],
+            "avgViewers": "191k subs",
+            "reason": "With a significant following of 191k, Best Indie Games serves as an established authority for discovery and visibility in the indie space. Partnering with them provides a broad reach among players actively seeking out high-quality, overlooked titles.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-010d9c",
+            "name": "Nic The Thicc",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Metroidvania"
+            ],
+            "avgViewers": "14k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-2c067f",
+            "name": "Exvarghra GameLog",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Metroidvania"
+            ],
+            "avgViewers": "8k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-76f4e8",
+            "name": "Action Game Station ",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Metroidvania"
+            ],
+            "avgViewers": "15k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-d299f8",
+            "name": "Top - Gaming",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Metroidvania"
+            ],
+            "avgViewers": "1k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "tt-h-75fbc0",
+            "name": "metroidvania_indie",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Enthusiast",
+                "Genre Specialist",
+                "Live Community"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "As an active streamer focused on the genre, this creator offers a direct line to a community specifically seeking indie Metroidvania content. Engaging this creator is essential for establishing organic grassroots momentum within the dedicated niche audience.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-01d076",
+            "name": "metroidvaniareview",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Hollow Knight Pro",
+                "Hardcore",
+                "Skill-Based"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "Focusing on Hollow Knight establishes this streamer as a destination for high-skill gameplay and deep-dive mechanics. Their platform provides a high-conversion environment for users already invested in the core tenets of the Metroidvania genre.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-bdfc92",
+            "name": "MetroidvaniaPodcast",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Lore Expert",
+                "Game Critic",
+                "Thought-Leader"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "The podcast format suggests an audience that prioritizes thoughtful discussion and critical analysis of titles like Ocean's Heart. This creator is a strategic choice for building brand authority and long-term interest through deep engagement.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-94ddd3",
+            "name": "metroidvania",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Genre Authority",
+                "Streamer",
+                "Generalist"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "This creator represents a central hub for genre-specific live content, making them a high-priority contact for broad visibility. Targeting this channel ensures exposure to a concentrated demographic of Metroidvania players.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-596bff",
+            "name": "MetroidvaniaFanboy",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Soulslike",
+                "Hardcore",
+                "Action-RPG"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "With a focus on challenging titles like Bloodborne, this streamer appeals to players who value complex exploration and rewarding difficulty curves. They are the ideal bridge to bring fans of soulslike-Metroidvania hybrids into your launcher.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        }
+    ],
+    "Cozy / Farm Sim": [
+        {
+            "id": "yt-h-0cd0a8",
+            "name": "Kaganath",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Completionist",
+                "Guide Maker",
+                "Livestreamer"
+            ],
+            "avgViewers": "21k subs",
+            "reason": "Kaganath provides consistent daily exposure through a combination of long-form guides and active live streaming. His focus on 100% completion runs allows for deep-dive showcases of your game's mechanics to a dedicated audience.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-c2ade8",
+            "name": "Furo",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Walkthrough Specialist",
+                "Multi-platform",
+                "Gameplay Focused"
+            ],
+            "avgViewers": "35k subs",
+            "reason": "Furo offers high-frequency content production that is ideal for rapid game updates and broad visibility across multiple social platforms. His business-ready approach makes him an efficient partner for structured promotional campaigns and walkthrough integration.",
+            "email": "business.furo@gmail.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-ff584b",
+            "name": "DoshDoshington",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Major Hub",
+                "Influential",
+                "Variety Creator"
+            ],
+            "avgViewers": "396k subs",
+            "reason": "DoshDoshington possesses a significant established audience that provides substantial reach and high-level social proof for your launcher. His unique brand of commentary creates strong potential for viral-style exposure that can drive massive traffic to a new platform.",
+            "email": "mestifilio.zyllius@gmail.com",
+            "discord": "Discovery Pending",
+            "twitter": "twitter.com/zyllius"
+        },
+        {
+            "id": "yt-h-03ed6b",
+            "name": "Payton'sCorner",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Cozy Gamer",
+                "Indie Advocate",
+                "Community Builder"
+            ],
+            "avgViewers": "58k subs",
+            "reason": "Payton'sCorner serves as a highly targeted influencer within the specific cozy gaming demographic, fostering a deeply engaged and loyal community. Her personality-driven content is perfect for authentic endorsements that resonate directly with your target player base.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-f9a34e",
+            "name": "JaeTeeGames",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Cozy Gaming",
+                "Indie Curator",
+                "Niche Expert"
+            ],
+            "avgViewers": "4k subs",
+            "reason": "JaeTeeGames offers a highly curated niche presence that effectively captures the specific UK-based indie and farming sim market. Her consistent weekly schedule and honest review format provide a trustworthy platform for building genuine interest in your game launcher.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-4be705",
+            "name": "Gameskeys",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Game Discovery",
+                "Mid-tier Influencer",
+                "Utility Focused"
+            ],
+            "avgViewers": "81k subs",
+            "reason": "As an established mid-tier creator, Gameskeys offers a reliable platform to reach a dedicated audience specifically looking for game utility and discovery. Their content style aligns perfectly with an indie launcher that prioritizes direct access to new and trending titles.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-2a9c51",
+            "name": "gamergirlgale",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Cozy Lifestyle",
+                "Community Builder",
+                "Let's Play"
+            ],
+            "avgViewers": "13k subs",
+            "reason": "Gamergirlgale possesses a highly engaged community that views her content as a lifestyle companion, making her an ideal partner for organic, long-form integration within the cozy gaming space. Her influence is perfect for building brand trust among viewers seeking authentic recommendations.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-10db11",
+            "name": "Miss Bubbles",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Review Specialist",
+                "Critical Analyst",
+                "Consumer Advocate"
+            ],
+            "avgViewers": "46k subs",
+            "reason": "Miss Bubbles provides a high-value opportunity due to her critical, verdict-driven review format that builds significant viewer trust and authority. Her selective approach to sponsorships ensures that any partnership with an indie launcher will be perceived as a high-quality, vetted recommendation.",
+            "email": "missbubbleshere@gmail.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-dde6ef",
+            "name": "Strawberry Milk Farm",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Genre Specialist",
+                "Farming Sim Expert",
+                "Niche Audience"
+            ],
+            "avgViewers": "12k subs",
+            "reason": "Strawberry Milk Farm offers a hyper-niche audience specifically curated for the farming simulation genre, ensuring maximum conversion relevance for your launcher. Targeting this creator allows for deep-level penetration into a community that is already actively seeking your specific game categories.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-34b59a",
+            "name": "JGigs",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Advocate",
+                "Growth Driver",
+                "Gaming Culture"
+            ],
+            "avgViewers": "70k subs",
+            "reason": "With a established audience size, JGigs provides a strong anchor point for your launcher's growth strategy within the broader independent gaming ecosystem. His reach is effective for driving awareness and sustained traffic to new platform features.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        }
+    ],
+    "Strategy / Sim": [
+        {
+            "id": "yt-h-ee268a",
+            "name": "Second Wind",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Critical Analysis",
+                "Industry Commentary",
+                "Platform Authority"
+            ],
+            "avgViewers": "515k subs",
+            "reason": "Second Wind represents a major hub for high-quality commentary and critical discussion within the gaming industry. Partnering with their team provides access to a highly engaged audience that values professional analysis and long-form content.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-0ce70c",
+            "name": "Sarunas Dev",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Developer",
+                "Strategy Enthusiast",
+                "Steam Growth"
+            ],
+            "avgViewers": "6k subs",
+            "reason": "As a niche, developer-led channel, Sarunas Dev offers authentic, grassroots marketing potential for specific strategy titles. Their direct link to Steam wishlisting makes them a high-conversion partner for targeted campaigns.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-7406db",
+            "name": "Doublecap",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Game Dev",
+                "Steam Demo",
+                "Indie Spotlight"
+            ],
+            "avgViewers": "34k subs",
+            "reason": "Doublecap serves as a focused partner for community-building, particularly for developers seeking to boost visibility for Steam demos. Their channel provides a grounded platform to showcase gameplay mechanics to a growing, strategy-interested base.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-a14bd0",
+            "name": "Jonas Tyroller",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Game Dev",
+                "Indie Legend",
+                "Strategy Expert"
+            ],
+            "avgViewers": "230k subs",
+            "reason": "Jonas Tyroller is a major influence in the indie space whose developer journey resonates with both gamers and fellow creators. His track record with successful titles like Thronefall makes him an ideal partner for credibility-driven marketing.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-cae490",
+            "name": "whatoplay",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Game Discovery",
+                "Mass Reach",
+                "Curator"
+            ],
+            "avgViewers": "667k subs",
+            "reason": "Whatoplay acts as a significant discovery hub, effectively aggregating content for players seeking their next title. Their large-scale reach is perfect for driving massive traffic to an indie launcher during key release windows.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-77bd7f",
+            "name": "PartyElite",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Strategy / Sim"
+            ],
+            "avgViewers": "255k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-25d8e7",
+            "name": "IGN",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Strategy / Sim"
+            ],
+            "avgViewers": "19.8M subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-e219b5",
+            "name": "CircleToonsHD",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Strategy / Sim"
+            ],
+            "avgViewers": "3.9M subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-ce019c",
+            "name": "SonderingEmily",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Strategy / Sim"
+            ],
+            "avgViewers": "77k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        }
+    ],
+    "Deckbuilder": [
+        {
+            "id": "yt-h-ce8fe1",
+            "name": "Best Indie Games",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Strategy",
+                "Hardcore",
+                "Reviewer"
+            ],
+            "avgViewers": "191k subs",
+            "reason": "With a highly specific focus on strategy and management, this creator provides direct access to the core demographic most likely to engage with complex deckbuilding mechanics. Their audience is primed for deep-dive content, making them a strategic choice for high-intent user acquisition.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-df6015",
+            "name": "Gaming Verse (GV)",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Deckbuilder"
+            ],
+            "avgViewers": "22",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-bbe580",
+            "name": "Rogan \ud83c\udfae gaming nonsense",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Deckbuilder"
+            ],
+            "avgViewers": "24k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-b9f5de",
+            "name": "That Indie Games Guy",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Deckbuilder"
+            ],
+            "avgViewers": "3k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-9116da",
+            "name": "Steam",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Deckbuilder"
+            ],
+            "avgViewers": "218k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-cf391c",
+            "name": "Game Design Library",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Game Design",
+                "Educational",
+                "Mechanics"
+            ],
+            "avgViewers": "6k subs",
+            "reason": "As a niche educational resource, this channel offers high-authority credibility for your game\u2019s mechanical depth within the deckbuilder genre. Partnering here allows for a sophisticated deep dive into your game\u2019s design philosophy that will resonate with developers and hardcore enthusiasts.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-4aaecf",
+            "name": "Indie Game Clinic",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Dev",
+                "Game Feedback",
+                "Deep Dive"
+            ],
+            "avgViewers": "42k subs",
+            "reason": "This channel functions as an ideal bridge between development feedback and community exposure, making it perfect for refining your game's systems before a public launch. Their focus on the 'making of' indie games provides a unique context that highlights the craftsmanship of your deckbuilder.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-e87de5",
+            "name": "Assemble Entertainment",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Discovery",
+                "Community Leader",
+                "Indie Enthusiast"
+            ],
+            "avgViewers": "3k subs",
+            "reason": "As an established mid-tier hub, this creator offers significant reach and a proven track record of converting viewers into players of indie titles. Their positive community focus makes them an excellent partner for driving high-volume awareness for a new game launcher.",
+            "email": "clement@bestindiegames.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-1f13b2",
+            "name": "Easily Distracted Games",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Publisher",
+                "Industry Expert",
+                "Strategy Focus"
+            ],
+            "avgViewers": "27k subs",
+            "reason": "Partnering with this established publisher provides a dual-benefit of industry-wide professional exposure and access to their extensive catalog of niche strategy fans. Leveraging their authority helps build institutional trust for your launcher among both players and other developers.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-1179ef",
+            "name": "deckbuilderusa",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Deckbuilder Specialist",
+                "Live Engagement",
+                "Niche Community"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "As an active streamer, this creator offers a direct channel to engage with a concentrated community of deckbuilding enthusiasts. Their live format provides high-intent visibility for an indie game launcher during gameplay sessions.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-1c2549",
+            "name": "deckbuilder1985",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Advocate",
+                "Streamer",
+                "Card Games"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "This creator represents a grassroots connection to the genre, making them ideal for authentic, community-driven outreach. Leveraging their active stream allows for immediate user feedback and high-trust product adoption.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-a84ddc",
+            "name": "deckbuilderbr",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Genre Expert",
+                "Interactive",
+                "Direct Conversion"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "Tapping into this active streamer's audience provides an opportunity to convert viewers who are already invested in deckbuilding mechanics. Their platform serves as a targeted environment for demonstrating the value proposition of a new launcher.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-547406",
+            "name": "Deckbuilder34",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Community Growth",
+                "Active Streamer",
+                "Strategy Gamer"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "Partnering with this streamer allows for real-time interaction with a dedicated deckbuilder audience. Their live content serves as an effective showcase for the utility and features of the launcher to interested players.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-398c3e",
+            "name": "deckbuilder",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Tactical Play",
+                "Live Audience",
+                "Deckbuilder Focus"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "Engaging this creator provides access to a focused viewership interested in the mechanics and meta-play of deckbuilders. Utilizing their stream ensures that the launcher is presented directly to a relevant and receptive user base.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        }
+    ],
+    "Soulslike / Action": [
+        {
+            "id": "yt-h-253914",
+            "name": "Rich Black Guy",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Massive Reach",
+                "General Gaming",
+                "Influencer"
+            ],
+            "avgViewers": "5.8M subs",
+            "reason": "As a COLOSSUS in the space, this creator offers unparalleled brand visibility to a massive, broad audience. Partnering with a channel of this scale is essential for achieving immediate, high-impact awareness during your launcher's launch phase.",
+            "email": "estern@3arts.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-811b19",
+            "name": "Grimlord | VR Souls-like Action RPG",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Soulslike",
+                "VR Gaming",
+                "Hardcore"
+            ],
+            "avgViewers": "4k subs",
+            "reason": "This creator represents a perfect niche target as they are already actively developing or showcasing VR Soulslike content. Their highly engaged, genre-specific audience is ideal for high-intent user acquisition.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-d36bc5",
+            "name": "GameZone",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Mobile Gaming",
+                "Trendsetter",
+                "Lists"
+            ],
+            "avgViewers": "700k subs",
+            "reason": "As a MAJOR HUB for mobile gaming, this creator provides critical access to a vast demographic of players frequently seeking new titles. Their ability to influence mobile gaming trends makes them a vital partner for driving high-volume traffic.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-3afa37",
+            "name": "Nasu",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Commentary",
+                "Community-Focused",
+                "Variety"
+            ],
+            "avgViewers": "188k subs",
+            "reason": "With a significant and dedicated following, this creator serves as a key mid-tier influencer for building community trust and authentic engagement. Their content style is well-suited for long-form discussions regarding your game's mechanics or narrative.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-175a57",
+            "name": "Lobey",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Advocate",
+                "Rising Talent",
+                "Action-RPG"
+            ],
+            "avgViewers": "7k subs",
+            "reason": "Targeting this creator provides an opportunity to build a long-term partnership with a growing content developer in the indie space. Their smaller, highly dedicated base allows for a more personal and cost-effective approach to community building.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-df1dcf",
+            "name": "Ziostorm",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Soulslike News",
+                "FromSoftware",
+                "Hardcore"
+            ],
+            "avgViewers": "165k subs",
+            "reason": "Ziostorm provides a highly focused platform for reaching the dedicated Soulslike community through consistent news updates. His mid-tier size ensures a high level of audience trust and direct engagement with core genre enthusiasts.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-9c6cda",
+            "name": "Iron Pineapple",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Influencer Hub",
+                "Dark Souls",
+                "Viral Reach"
+            ],
+            "avgViewers": "1.7M subs",
+            "reason": "As a major hub for the genre, Iron Pineapple offers unparalleled reach to millions of high-intent viewers who value his specific brand of humor and expertise. Leveraging his platform is essential for achieving massive visibility and broad-scale game awareness.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-106768",
+            "name": "Action Game Station ",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Discovery",
+                "Action RPG",
+                "New Releases"
+            ],
+            "avgViewers": "15k subs",
+            "reason": "Action Game Station serves as an efficient discovery engine for niche audiences specifically searching for upcoming action and roguelike titles. His channel is ideal for grassroots marketing campaigns that benefit from high-intent, targeted viewership.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-ad713e",
+            "name": "toptoplay",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "General Gaming",
+                "Indie Promotion",
+                "Early Adopters"
+            ],
+            "avgViewers": "3k subs",
+            "reason": "toptoplay offers a grassroots opportunity to build early momentum through direct audience interaction in the broader gaming community. Targeting this creator is a cost-effective way to cultivate a foundational player base during the early stages of a game launch.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        }
+    ],
+    "Horror": [
+        {
+            "id": "yt-h-18444b",
+            "name": "KingWoolz Games",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Generalist",
+                "Mass-Market",
+                "High-Reach"
+            ],
+            "avgViewers": "1.1M subs",
+            "reason": "As a COLOSSUS in the space with 1.1M subscribers, this creator provides massive reach for high-level brand awareness. Their broad gaming appeal allows for significant top-of-funnel exposure to a diverse audience.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-e37ab4",
+            "name": "CJUGames",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Indie-Focused",
+                "Horror-Centric",
+                "Community-Driven"
+            ],
+            "avgViewers": "164k subs",
+            "reason": "With a dedicated following of 164k, this creator offers highly concentrated engagement within the indie horror community. Their specific focus on the genre ensures that your title will reach a highly receptive and relevant audience.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-ea34ed",
+            "name": "CircleToonsHD",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Viral-Content",
+                "Entertainment",
+                "Major-Hub"
+            ],
+            "avgViewers": "3.9M subs",
+            "reason": "This MAJOR HUB commands an impressive 3.9M subscribers, offering unparalleled viral potential and mass-market visibility. Their content style is ideal for generating wide-scale awareness for your launcher's launch event.",
+            "email": "CircleToons@oddprojects.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-4f12b1",
+            "name": "BigGaming64",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Indie Horror Specialist",
+                "High-Volume Reach",
+                "Content Creator"
+            ],
+            "avgViewers": "989k subs",
+            "reason": "As a MAJOR HUB in the indie horror space, this creator offers unparalleled reach and established authority to drive mass adoption for the launcher. Their dedicated focus on the genre ensures that content integrations will resonate deeply with a highly relevant, horror-hungry audience.",
+            "email": "rackzezac@gmail.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-65682d",
+            "name": "amandaprescottfx",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Visual-Aesthetics",
+                "SFX-Artist",
+                "Creator-Culture"
+            ],
+            "avgViewers": "304k subs",
+            "reason": "With 304k subscribers, this creator provides high-value influence within the aesthetic and production side of the horror genre. Their unique background in filmmaking and SFX offers a specialized angle for marketing horror atmospheres.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-ca8813",
+            "name": "tylersma",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Horror Influencer",
+                "Active Community",
+                "Mid-Tier Authority"
+            ],
+            "avgViewers": "93k subs",
+            "reason": "With a significant and loyal audience, this creator serves as a key influencer for mid-tier marketing campaigns aiming for high conversion rates. Their established presence allows for meaningful community engagement that bridges the gap between niche horror enthusiasts and casual players.",
+            "email": "tylersmainfo@gmail.com",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-2f0a15",
+            "name": "LightskinNightmare",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Horror Enthusiast",
+                "Community Growth",
+                "Targeted Reach"
+            ],
+            "avgViewers": "348k subs",
+            "reason": "This creator represents a mid-sized tactical asset, perfect for building brand recognition through consistent, medium-scale exposure. Their growth trajectory suggests a high potential for sustained partnership value as they continue to scale within the horror gaming niche.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-504d59",
+            "name": "LeadbellyLuffy",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Lore Expert",
+                "Niche Engagement",
+                "Emerging Creator"
+            ],
+            "avgViewers": "1k subs",
+            "reason": "Operating as a grassroots creator, this channel is ideal for hyper-niche, community-driven outreach campaigns that require high engagement. They offer a cost-effective opportunity to build authentic grassroots advocacy for the launcher within specific sub-communities of horror fans.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-3c7785",
+            "name": "HorrorPapi",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Roblox Horror",
+                "Community Engagement",
+                "Platform Native"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "As an active Roblox streamer, HorrorPapi reaches a dedicated younger demographic that frequently engages with indie horror titles within the platform ecosystem. Leveraging this connection allows for direct access to a community that prioritizes viral, bite-sized horror experiences.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-9325f9",
+            "name": "HORROR_SCREAM_",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Micro-Community",
+                "High Interaction",
+                "Indie Supporter"
+            ],
+            "avgViewers": "~152 avg views",
+            "reason": "HORROR_SCREAM_ provides a highly focused environment where community interaction is prioritized, making them ideal for high-conversion indie game testing or early access feedback. Their current viewership indicates a tight-knit audience that is more likely to engage deeply with new horror IPs.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-068643",
+            "name": "Horror",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Category Authority",
+                "Discovery",
+                "Brand Exposure"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "This creator maintains a broad, neutral platform presence that serves as a flexible baseline for general horror discovery. Targeting them is a strategic move to establish a presence within the overarching category of horror-centric channels.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-820b59",
+            "name": "horror_tek",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Grassroots",
+                "Emerging Talent",
+                "High Trust"
+            ],
+            "avgViewers": "~17 avg views",
+            "reason": "horror_tek offers a grassroots entry point into the creator space, allowing for cost-effective partnerships and genuine, long-term advocacy for your launcher. Their niche audience size ensures that every promotion is met with authentic curiosity and high-trust interaction.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "tt-h-5a6d9c",
+            "name": "horrorfantasies",
+            "platform": "twitch",
+            "matchScore": 85,
+            "conversionPotential": "High",
+            "tags": [
+                "Mainstream Bridge",
+                "Cross-Genre",
+                "Active Community"
+            ],
+            "avgViewers": "Active Streamer",
+            "reason": "By targeting creators within the hyper-competitive Fortnite ecosystem, you can capture attention from gamers looking for a diversion into intense, atmosphere-focused horror experiences. This provides a strategic bridge between mainstream battle royale audiences and niche indie horror enthusiasts.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        }
+    ],
+    "Puzzle / Brain": [
+        {
+            "id": "yt-h-a0296e",
+            "name": "Jestr",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Indie Discovery",
+                "Game News",
+                "Marketing Partner"
+            ],
+            "avgViewers": "15k subs",
+            "reason": "Jestr operates as a strategic hub for game discovery, making them an ideal partner for cross-promotion and reaching an audience actively looking for new indie titles. Their focus on the indie ecosystem aligns perfectly with your launcher's mission to highlight high-quality puzzle and brain-teaser games.",
+            "email": "contact@jestr.gg",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-4c8e7c",
+            "name": "Markiplier",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Massive Reach",
+                "Variety Gaming",
+                "Top Tier Influencer"
+            ],
+            "avgViewers": "38.6M subs",
+            "reason": "Markiplier is a COLOSSUS in the gaming industry, capable of driving immense traffic and instant mainstream awareness to a title through a single video. Securing his interest would elevate your launcher from a niche tool to a widely recognized platform within the puzzle gaming space.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-c4dc4d",
+            "name": "LionEye",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Mobile Gaming",
+                "Niche Reviewer",
+                "Early Adopter"
+            ],
+            "avgViewers": "147",
+            "reason": "LionEye represents a micro-niche community focused specifically on mobile gaming content, which is valuable for testing specialized puzzle mechanics or mobile-integrated launchers. Their small, dedicated following allows for highly targeted feedback and low-cost experimentation within the brain-game genre.",
+            "email": "Discovery Pending",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-5a0bba",
+            "name": "special edd",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "High Volume",
+                "Gaming Culture",
+                "Massive Reach"
+            ],
+            "avgViewers": "5.8M subs",
+            "reason": "As a MAJOR HUB, special edd commands a vast audience that provides the scale necessary to perform stress tests or broad market validation for your launcher. Partnering with them would facilitate rapid user acquisition by exposing your platform to a diverse, high-engagement gaming demographic.",
+            "email": "eddievr@clickmgmt.com.au",
+            "discord": "Discovery Pending"
+        },
+        {
+            "id": "yt-h-1ba77e",
+            "name": "Games Puff",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Puzzle / Brain"
+            ],
+            "avgViewers": "17k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-82d271",
+            "name": "heyKipp",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Puzzle / Brain"
+            ],
+            "avgViewers": "486k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-5ed0d1",
+            "name": "rey AI",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Puzzle / Brain"
+            ],
+            "avgViewers": "72k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-f4a448",
+            "name": "Embankment",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "High",
+            "tags": [
+                "Puzzle / Brain"
+            ],
+            "avgViewers": "14k subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        },
+        {
+            "id": "yt-h-537bc6",
+            "name": "SMii7Y",
+            "platform": "youtube",
+            "matchScore": 82,
+            "conversionPotential": "Medium",
+            "tags": [
+                "Puzzle / Brain"
+            ],
+            "avgViewers": "8.6M subs",
+            "reason": "Manual review required.",
+            "email": "Unknown",
+            "discord": "Unknown"
+        }
+    ]
+}
